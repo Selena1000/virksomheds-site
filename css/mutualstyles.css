@@ -1,51 +1,84 @@
-a {
-  color: #1a0dab;
-  text-decoration: none;
-  font-size: 36px;
-  width: auto;
-  height: auto;
-  margin: 50px;
-  padding: 35px;
-  border: 2px solid #1a0dab;
-  border-radius: 8px;
-  background-color: #f8f9fa;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+:root {
+  /* Colours */
+  --color-bg: light-dark(#f4f2e9); /* page background /*
+  
+
+  /* Header */
+  --color-head-bg: linear-gradient(to bottom right, #f4f2e9 50%, #9b0c0c 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, #f4f2e9 50%, #9b0c0c 50%) bottom left / 50% 50% no-repeat,
+    linear-gradient(to top left, #f4f2e9 50%, #9b0c0c 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, #f4f2e9 50%, #9b0c0c 50%) top right / 50% 50% no-repeat;
+
+  /* Logotype */
+  --color-logotype-bg: light-dark(#000000, #fffae2);
+  --color-text-logotype: light-dark(#fffae2, #494949);
+  --font-logotype-size: 1rem;
+
+  /* Global menu */
+  --color-menu-bg: light-dark (#6f90eb, #d9e3ff);
+  /* Links */
+  --color-link-bg: light-dark(#fffae2, #494949);
+  --color-link-hover: light-dark(#fff, #272727); /* used */
+  --color-link-active: light-dark(#fceb94, #707070); /* used */
+  --border-radius-links: 37px;
+
+  /* Headlines og rubrik */
+  --font-h1-size: 3rem;
+  --font-sub1-size: 3rem;
+  --font-h2-size: 2.25rem;
+  --font-h3-size: 2rem;
+  --color-headline-bg: light-dark(#000000, #fffae2);
+  --color-headline-text-page: light-dark(#ffffff, #272727);
+
+  /* Tekst */
+  --color-text: light-dark(#000, #fffae2);
+  --color-text-inverted: light-dark(#ffffff, #272727);
+
+  /*  Marginer */
+  --margin-head-bottom: 80px;
+
+  /* Borders */
+  --border-radius: 37px;
+
+  /* Cards */
+  --color-card-bg: light-dark(#ffffff, #272727);
+  --color-cta-card-bg: #ff4b00;
+  /* news-cards */
+  --color-news-bg: light-dark(#fffae2, #494949);
+  --color-news-bg-inverted: #dbe2f5;
+  --color-cta-newscard-bg: #ffa680;
+  --color-cta-newscard-bg-inverted: light-dark(#6f90eb, #d9e3ff);
+
+  /* Fonts */
+  --font-family-sans: ui-sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Text sizes */
+  --logotype-size: 3rem;
+  --headline1-size: 3rem;
+  --headline2-size: 2.25rem;
+  --headline3-size: 2rem;
+  --bodytext-size: 1.25rem;
+  --cta-text-size: 1rem;
+  --followup-text-size: 1rem;
+  --form-submit-size: 0.75rem;
+
+  /* Infographics */
+  --color-info-bg: light-dark(#ffffff, #272727);
+  --color-infobox-1-bg: #ff4b00;
+  --color-infobox-2-bg: #ffa680;
+
+  /* Forms */
+  --form-background-color: light-dark(#ffffff, #272727);
+  --info-background-color: light-dark(#fffae2, #494949);
+  --color-bg-input: #dbe2f5;
 }
 
-button a:hover {
-  background-color: #1a0dab;
-  color: #ffffff;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+html {
+  color-scheme: light;
 }
 
-button a:active {
-  background-color: #0c0786;
-  border-color: #0c0786;
-  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background-color: linear-gradient(135deg, #f0f0f0, #dcdcdc);
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #e0e0e0;
-}
-
-main {
-  text-align: center;
+html.dark {
+  color-scheme: dark;
 }
