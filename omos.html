@@ -1,11 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+<figure class="volunteer__img card">
+</figure>
+</div>
+</section>
+
+
+<div class="hr" role="presentation"></div>
+
+
+<!-- ===== LOKATION ===== -->
+<section id="location" aria-labelledby="location-title">
+<h2 id="location-title">Vores lokation</h2>
+<img src="images/Mask group.webp" alt="Frivillige smiler til kamera" />
+<div class="location">
+<figure class="photo card">
+<img src="https://images.unsplash.com/photo-1519680772-8b3953bd6192?q=80&w=1600&auto=format&fit=crop" alt="Facade på et aktivitetscenter" />
+</figure>
+<div>
+<p>Nørrebro Fighters samarbejder med Ressourcecenter Ydre Nørrebro, som vi er så heldige at låne lokaler hos. Derudover samarbejder vi med Københavns Kommune i et initiativ om at øge mangfoldigheden i københavnske virksomheder og i det københavnske foreningsliv.</p>
+<p>Vi samarbejder også med Nørrebro Idrætsråd, Idrætsprojektet, lokale boligforeninger og andre organisationer på Nørrebro.</p>
+<iframe class="map" title="Google Maps" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.412836397767!2d12.545!3d55.699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQxJzU2LjQiTiAxMsKwMzInNDIuMCJF!5e0!3m2!1sda!2sdk!4v1700000000000"></iframe>
+</div>
+</div>
+</section>
+
+
+<!-- Dummy anchors for links used in nav/hero -->
+<section id="signup" hidden aria-hidden="true"></section>
+<section id="schedule" hidden aria-hidden="true"></section>
+<section id="contact" hidden aria-hidden="true"></section>
+<section id="login" hidden aria-hidden="true"></section>
+</main>
+
+
+<footer>
+<div class="footer__inner">
+<div class="brand" aria-label="Nørrebro Fighters logo i bundlinjen">
+<span class="brand__logo" aria-hidden="true">🥊</span>
+<span>Nørrebro Fighters</span>
+</div>
+<div class="footer__links">
+<a href="#about">Om os</a>
+<a href="#signup">Tilmelding</a>
+<a href="#schedule">Holdoversigt</a>
+<a href="#contact">Kontakt os</a>
+</div>
+</div>
+</footer>
+
+
+<script>
+// Lille helper til mobilmenu
+const header = document.querySelector('.topbar');
+const nav = document.querySelector('.nav');
+const burger = document.getElementById('burger');
+burger?.addEventListener('click',()=>{nav.classList.toggle('nav--open')});
+
+
+// Glidende scroll for interne ankre
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+a.addEventListener('click', e=>{
+const id = a.getAttribute('href');
+if(id && id.length>1){
+const el = document.querySelector(id);
+if(el){
+e.preventDefault();
+window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 8, behavior:'smooth'});
+nav.classList.remove('nav--open');
+}
+}
+});
+});
+</script>
 </body>
 </html>
