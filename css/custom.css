@@ -1,0 +1,12 @@
+:root {
+  /* background */
+  --color-bg: #f4f2e9;
+
+  /* margins */
+  --top-margin: 20px;
+
+  /* borders */
+  --border-radius: 28px;
+
+  --border-color: #9b0c0c;
+}
