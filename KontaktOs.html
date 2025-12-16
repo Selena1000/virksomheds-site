@@ -5,26 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/mutualstyles.css" />
     <link rel="stylesheet" href="css/custom.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/kontaktos.css" />
+    <title>Kontakt Os</title>
   </head>
   <body>
     <header>
-      <header>
-        <nav>
-          <div class="logo">LOGO</div>
-          <ul class="nav-links">
-            <li><a href="#">Forside</a></li>
-            <li><a href="#">Holdtilmelding</a></li>
-            <li><a href="#">Om os</a></li>
-            <li><a href="#">Kontakt os</a></li>
-          </ul>
-          <div class="login-button">
-            <button id="loginBtn">Login</button>
-          </div>
-        </nav>
-      </header>
+      <nav>
+        <div class="logo">
+          <a href="index.html"> <img src="images/nytlogo.png" /></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Forside</a></li>
+          <li><a href="tilmelding.html">Holdtilmelding</a></li>
+          <li><a href="omos.html">Om os</a></li>
+          <li><a href="kontaktos.html">Kontakt os</a></li>
+        </ul>
+        <div class="login-button">
+          <button id="loginBtn">Login</button>
+        </div>
+      </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <h2>Kontakt Os</h2>
+      <p class="line1">Har du spørgsmål til vores hold, træningen eller tilmelding, så er du velkommen til at skrive til os.</p>
+      <p class="line2">Da vi er en lille frivilligdrevet forening, forsøger vi at vende tilbage så hurtigt som muligt.</p>
+
+      <section class="formular">
+        <p class="formular-tekst">Skriv til os</p>
+        <form id="form" class="topBefore">
+          <input id="name" type="text" placeholder="NAVN" />
+          <input id="email" type="text" placeholder="E-MAIL" />
+          <input id="emne" type="text" placeholder="EMNE" />
+          <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+          <input id="submit" type="submit" value="Send!" />
+        </form>
+        <p id="succesBesked" style="display: none; text-align: center; padding: 15px; background-color: #e8f5e9">Tak for din besked! Vi henvender os tilbage så hurtigst som muligt! Tak for din tålmodighed.</p>
+      </section>
+    </main>
+    <script src="js/kontaktformular.js"></script>
   </body>
+  <footer class="footer">
+    <div><img src="images/footerbillede.png" alt="Nørrebro Fighters Logo" /></div>
+    <div class="footer-tekstinfo">
+      <div class="sek1" style="margin-bottom: 5em">
+        <p>Nørrebro fighters</p>
+        <p>RessourceCenter Ydre Nørrebro</p>
+        <p>Tagensvej 85D • 2200 København N</p>
+      </div>
+      <div class="sek2" style="margin-bottom: 3em">
+        <p>REG NR: 2102</p>
+        <p>KONTO NR: 6888-476-332</p>
+      </div>
+      <div class="sek3" style="margin-bottom: 4em">
+        <a href="mailto:kontakt_noerrebrofighters@outlook.com"> Kontakt_noerrebrofighters@outlook.com </a>
+      </div>
+      <div class="sek4">
+        <p>CVR: 35199373</p>
+      </div>
+    </div>
+    <div>
+      <li><a href="index.html">Forside</a></li>
+      <li><a href="tilmelding.html">Holdtilmelding</a></li>
+      <li><a href="omos.html">Om os</a></li>
+      <li><a href="kontaktos.html">Kontakt os</a></li>
+    </div>
+  </footer>
 </html>

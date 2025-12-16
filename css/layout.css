@@ -1,20 +1,14 @@
-/* grids */
-.grid_1-1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  justify-items: center;
+header {
+  background: linear-gradient(to bottom right, #f4f2e9 70%, #9b0c0c 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, #f4f2e9 70%, #9b0c0c 50%) bottom left / 50% 50% no-repeat,
+    linear-gradient(to top left, #f4f2e9 70%, #9b0c0c 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, #f4f2e9 70%, #9b0c0c 50%) top right / 50% 50% no-repeat;
+  width: 100%;
+  height: 10em;
+}
+header {
+  height: auto;
+  color: #9b0c0c;
   align-items: center;
-}
-
-.about-text {
-  grid-area: 1/2;
-  width: 400px;
-}
-
-.goals-text {
-  grid-area: 1/1;
-  width: 400px;
+  border-bottom: 2px solid #9b0c0c;
 }
 
 nav {
@@ -23,6 +17,8 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   padding: 0 20px;
+  margin-top: -2em;
+  height: 10em;
 }
 
 nav ul {
@@ -36,7 +32,6 @@ nav ul {
 
 ul {
   width: auto;
-  height: 120;
   padding: 20px;
   margin: 20px;
   border-radius: var(--border-radius);
@@ -51,11 +46,110 @@ ul li {
 ul li a {
   text-decoration: none;
   color: var(--link-color);
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: thin;
+  font-size: 15px;
   padding: 10px 15px;
   align-items: center;
   justify-content: center;
+  font-family: "mainard", sans-serif;
+}
+
+.logo img {
+  width: 180px;
+  height: auto;
+  margin-left: -3em;
+}
+
+/* login knappen med blå hover + en dejlig streg... its gonna be liiittt */
+button#loginBtn {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 15px;
+  font-family: "mainard", sans-serif;
+}
+button#loginBtn:hover {
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+button#loginBtn::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  bottom: -4px;
+  width: 0;
+  height: 1.5px;
+  background-color: #0b3379;
+  transition: 0.3s ease;
+}
+button#loginBtn:hover::after {
+  width: 100%;
+}
+button#loginBtn:hover {
+  color: #0b3379;
+}
+/* header i boksen, same shiii yayyyy */
+nav ul li a {
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+header nav li a::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  bottom: -4px;
+  width: 0;
+  height: 1.5px;
+  background-color: #0b3379;
+  transition: 0.3s ease;
+}
+
+header nav li a:hover::after {
+  width: 100%;
+}
+
+header nav li a:hover {
+  color: #0b3379;
+}
+
+.footer {
+  background-color: #9b0c0c;
+  height: 400px;
+  margin-top: 50px;
+  font-family: "mainard", sans-serif;
+  color: white;
+  font-size: 14px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer-tekstinfo {
+  padding: 20px;
+  align-content: center;
+}
+
+footer img {
+  width: 250px;
+  height: auto;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer a:hover {
+  color: #0b3379;
 }
 
 .logo img {

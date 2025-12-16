@@ -25,3 +25,6 @@
   --infocard-bg-color: #9b0c0c;
   --infocard-text-color: #f4f2e9;
 }
+body {
+  margin: 0;
+}
