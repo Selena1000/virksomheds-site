@@ -5,26 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/mutualstyles.css" />
     <link rel="stylesheet" href="css/custom.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/kontaktos.css" />
+    <title>Kontakt Os</title>
   </head>
   <body>
     <header>
-      <header>
-        <nav>
-          <div class="logo">LOGO</div>
-          <ul class="nav-links">
-            <li><a href="#">Forside</a></li>
-            <li><a href="#">Holdtilmelding</a></li>
-            <li><a href="#">Om os</a></li>
-            <li><a href="#">Kontakt os</a></li>
-          </ul>
-          <div class="login-button">
-            <button id="loginBtn">Login</button>
-          </div>
-        </nav>
-      </header>
+      <nav>
+        <div class="logo">
+          <a href="index.html"> <img src="images/nytlogo.png" /></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Forside</a></li>
+          <li><a href="tilmelding.html">Holdtilmelding</a></li>
+          <li><a href="omos.html">Om os</a></li>
+          <li><a href="kontaktos.html">Kontakt os</a></li>
+        </ul>
+        <div class="login-button">
+          <button id="loginBtn">Login</button>
+        </div>
+      </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <h2>Kontakt Os</h2>
+      <p class="line1">Har du spørgsmål til vores hold, træningen eller tilmelding, så er du velkommen til at skrive til os.</p>
+      <p class="line2">Da vi er en lille frivilligdrevet forening, forsøger vi at vende tilbage så hurtigt som muligt.</p>
+
+      <section class="formular">
+        <p class="formular-tekst">Skriv til os</p>
+        <div class="formular-boks">
+          <form id="kontaktFormular">
+            <label for="navn" class="visually-hidden">Navn</label>
+            <input type="text" id="navn" name="navn" placeholder="Navn" required />
+
+            <label for="email" class="visually-hidden">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required />
+
+            <label for="emne" class="visually-hidden">Emne</label>
+            <input type="text" id="emne" name="emne" placeholder="Emne" required />
+
+            <label for="besked" class="visually-hidden">Besked</label>
+            <textarea id="besked" name="besked" placeholder="Besked" rows="10" required></textarea>
+
+            <button type="submit">Send</button>
+          </form>
+
+          <p id="succesBesked" style="display: none; text-align: center; padding: 15px; background-color: #e8f5e9">Tak for din besked! Jeg henvender mig tilbage så snart jeg kan og tak for din tålmodighed!</p>
+        </div>
+      </section>
+    </main>
+    <script src="js/kontaktformular.js"></script>
   </body>
+  <footer></footer>
 </html>
