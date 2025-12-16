@@ -8,6 +8,7 @@ header {
   height: auto;
   color: #9b0c0c;
   align-items: center;
+  border-bottom: 2px solid #9b0c0c;
 }
 
 nav {
@@ -116,5 +117,39 @@ header nav li a:hover::after {
 }
 
 header nav li a:hover {
+  color: #0b3379;
+}
+
+.footer {
+  background-color: #9b0c0c;
+  height: 400px;
+  margin-top: 50px;
+  font-family: "mainard", sans-serif;
+  color: white;
+  font-size: 14px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer-tekstinfo {
+  padding: 20px;
+  align-content: center;
+}
+
+footer img {
+  width: 250px;
+  height: auto;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer a:hover {
   color: #0b3379;
 }
