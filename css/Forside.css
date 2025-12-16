@@ -8,6 +8,10 @@ header {
   align-items: center;
 }
 
+header button {
+  color: #9b0c0c;
+}
+
 nav ul {
   border: 4px solid var(--border-color);
 }
@@ -20,4 +24,447 @@ main {
 
 .hero img {
   width: 100%;
+}
+
+.article-img-container-1 img,
+.article-img-container-2 img {
+  width: 100%;
+  height: 300px;
+  border-radius: var(--border-radius);
+  border: 4px solid var(--border-color);
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.info-card {
+  background-color: var(--infocard-bg-color);
+  border: 2px solid var(--info-border-color);
+  border-radius: calc(var(--border-radius) - 6px);
+  padding: 0.6rem;
+  width: auto;
+  display: grid;
+  /* two columns: main content (left) and stacked image+popup (right) */
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: auto 1fr; /* image row + popup row in the right column */
+  justify-content: space-evenly;
+  align-items: start;
+  gap: 1rem;
+  text-align: start;
+  margin: 20px;
+  position: relative;
+  /* allow the card to size naturally so content never gets clipped */
+  max-height: none;
+  overflow: visible;
+}
+
+/* ===== Figma-like list & image styling ===== */
+/* left list: full height stacked buttons with separators */
+.info-card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0;
+  padding: 8px;
+  background: transparent;
+}
+.info-card-text .info {
+  width: 100%;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.12);
+}
+.info-card-text .info button {
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding: 22px 24px;
+  background: var(--infocard-bg-color);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+}
+.info-card-text .info button h3 {
+  margin: 0;
+}
+
+/* right image: big rounded image that sits to the right and matches figma proportions */
+.info-img-display {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 18px;
+}
+.info-img-display > div {
+  width: 100%;
+  max-width: 460px; /* control image width */
+  border-radius: 26px;
+  overflow: hidden;
+}
+.info-img-display img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* popup styling to match figma: inset box with centered heading */
+.info-card-popup {
+  padding: 18px;
+  box-sizing: border-box;
+}
+.info-card-popup .infocard {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.02);
+}
+.info-card-popup .infocard h4 {
+  background: var(--color-bg);
+  display: inline-block;
+  padding: 14px 28px;
+  margin: 0 0 16px 0;
+}
+
+/* Visual polish: rounded corners on the section and consistent inner spacing */
+.info-card {
+  border-radius: 26px;
+  padding: 18px;
+}
+
+/* make left column (buttons) distribute vertically evenly */
+.info-card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 8px;
+}
+
+/* layout placements for new two-row design */
+.info-card-text {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3; /* span two rows */
+  height: 100%;
+}
+
+.info-img-display {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3; /* span two rows so the image runs the full height of the right column */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.info-card-popup {
+  grid-column: 2 / 3; /* popup sits below the image in the right column */
+  grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0.5rem;
+  pointer-events: none;
+  margin: 0;
+  height: calc(100% - 140px); /* leave room for the image above; kept proportional */
+  overflow: auto; /* allow popup content to scroll instead of stretching the card */
+  padding: 8px;
+}
+
+/* ensure the image column centers its active image and distributes space evenly */
+.info-img-display {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+/* make popup column distribute its internal sections evenly */
+.info-card-popup {
+  grid-column: 2 / 3; /* popup sits in the right column */
+  grid-row: 2 / 3; /* below the image */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 0.5rem;
+  pointer-events: none;
+  margin: 0;
+  height: auto;
+}
+
+.info-card h3 {
+  color: var(--infocard-text-color);
+  padding: 8px 6px;
+  font-size: 0.95rem;
+}
+
+/* bigger, more tappable buttons */
+.info-card .info button,
+.info-card .info > button {
+  font-size: 1rem;
+  padding: 12px 14px;
+  border-radius: calc(var(--border-radius) - 8px);
+}
+
+/* animate text fade and image slide */
+.infocard.visible {
+  animation: fadeIn 320ms ease-out both;
+}
+
+.info-img-display > div.visible {
+  animation: slideIn 420ms cubic-bezier(0.22, 0.9, 0.22, 1) both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.info-card h2 {
+  color: var(--infocard-text-color);
+}
+
+.info-card h3:hover {
+  background-color: var(--color-bg);
+  color: #9b0c0c;
+}
+
+.info-card-popup button {
+  color: var(--infocard-text-color);
+  border: 4px solid var(--infocard-text-color);
+}
+
+.info-card-popup {
+  /* place popup in the third column */
+  grid-column: 3 / 4;
+  gap: 0;
+  pointer-events: none;
+  margin: 0;
+  height: 100%;
+}
+
+.info-card-popup .infocard {
+  pointer-events: auto;
+  width: 100%;
+  margin: 0;
+  display: none; /* hidden by default; shown when .visible */
+  flex: 1 1 auto; /* allow visible card to grow and fill popup */
+  padding: 6px; /* smaller internal padding */
+}
+
+.info-card-popup .infocard button {
+  margin-top: 1rem;
+  padding: auto;
+  margin: auto;
+}
+
+.info-card-popup ul li {
+  list-style: disc;
+  max-width: 100%;
+}
+
+.info-card-popup .infocard button {
+  margin-top: 0.5rem;
+  padding: 8px 10px;
+  margin: auto;
+  border: 4px solid var(--info-border-color);
+  border-radius: var(--border-radius);
+}
+
+/* make the display image area fit nicely inside the right column */
+.display-image {
+  width: 100%;
+  /* image fills the full height of the right column */
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  overflow: hidden;
+  border-radius: calc(var(--border-radius) - 6px);
+  display: block;
+  box-sizing: border-box;
+}
+
+.display-image img,
+.display-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* preserves aspect ratio and fills the container */
+  display: block;
+}
+
+/* show the infocard block when visible */
+.info-card-popup .infocard.visible {
+  display: block;
+}
+
+/* ensure visible infocard respects the popup height and scrolls internally if needed */
+.info-card-popup .infocard {
+  max-height: 100%;
+  overflow: auto;
+}
+
+/* hide the cover image when a specific infocard is open */
+.display-image.cover-hidden {
+  display: none;
+}
+
+.infocard {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: 1 / 4;
+  border: 2px solid var(--info-border-color);
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.infocard h4 {
+  padding: 20px;
+  background-color: var(--color-bg);
+  color: var(--h1-color);
+}
+
+/* hide the hold images by default; show when .visible is added */
+.info-img-display > div {
+  display: none;
+}
+.info-img-display > div.visible {
+  display: block;
+}
+
+/* ensure hold images fit their container */
+.info-img-display img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: calc(var(--border-radius) - 6px);
+}
+
+/* place the image column into the middle grid column */
+.info-img-display {
+  grid-column: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.info-img-display > div {
+  width: 100%;
+}
+
+/* Compact modifier: apply compact sizing only when .info-card has .compact */
+.info-card.compact {
+  border-width: 1px;
+  padding: 0.4rem;
+  margin: 12px;
+  grid-template-columns: 1.6fr 260px;
+}
+
+.info-card.compact .display-image {
+  min-height: 100px;
+}
+
+.info-card.compact .info-card-popup .infocard {
+  padding: 6px;
+}
+
+.info-img-display img {
+  max-width: 300px;
+}
+
+/* Responsive: stack popup under main content on small screens */
+@media (max-width: 800px) {
+  .info-card {
+    grid-template-columns: 1fr;
+  }
+  .info-card .info-card-popup {
+    grid-column: 1 / -1;
+    order: 2;
+    width: 100%;
+    margin-top: 12px;
+  }
+  .info-card .display-image {
+    min-height: 140px;
+  }
+}
+
+/* ===== Final layout overrides: 2fr / 1fr with image above popup ===== */
+/* enforce the left column to be larger (2fr) and the right column compact (1fr) */
+.info-card {
+  grid-template-columns: 3fr 2fr !important;
+  grid-template-rows: auto 1fr !important; /* image row, popup row */
+  overflow: visible !important;
+}
+
+/* left buttons column spans both rows and scrolls if needed */
+.info-card-text {
+  grid-column: 1 / 2 !important;
+  grid-row: 1 / 3 !important;
+  overflow: auto;
+}
+
+/* image container sits above the popup in the right column */
+.info-img-display {
+  grid-column: 2 / 3 !important;
+  grid-row: 1 / 2 !important;
+  /* let image size itself to the popup width */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.info-img-display > div {
+  display: none;
+  width: 100%;
+}
+.info-img-display > div.visible {
+  display: block;
+}
+
+.info-img-display img,
+.display-image img {
+  width: 100%;
+  height: auto; /* keep natural aspect ratio and fit popup width */
+  object-fit: cover;
+  display: block;
+}
+
+/* popup sits below the image in the right column and is scrollable */
+.info-card-popup {
+  grid-column: 2 / 3 !important;
+  grid-row: 2 / 3 !important;
+  /* allow popup to size naturally and not introduce internal scrolling */
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  pointer-events: auto !important;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+/* ensure visible infocard doesn't expand parent; it scrolls internally */
+.info-card-popup .infocard {
+  max-height: none;
+  overflow: visible;
+  box-sizing: border-box;
 }
