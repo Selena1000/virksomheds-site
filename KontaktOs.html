@@ -33,28 +33,42 @@
 
       <section class="formular">
         <p class="formular-tekst">Skriv til os</p>
-        <div class="formular-boks">
-          <form id="kontaktFormular">
-            <label for="navn" class="visually-hidden">Navn</label>
-            <input type="text" id="navn" name="navn" placeholder="Navn" required />
-
-            <label for="email" class="visually-hidden">Email</label>
-            <input type="email" id="email" name="email" placeholder="Email" required />
-
-            <label for="emne" class="visually-hidden">Emne</label>
-            <input type="text" id="emne" name="emne" placeholder="Emne" required />
-
-            <label for="besked" class="visually-hidden">Besked</label>
-            <textarea id="besked" name="besked" placeholder="Besked" rows="10" required></textarea>
-
-            <button type="submit">Send</button>
-          </form>
-
-          <p id="succesBesked" style="display: none; text-align: center; padding: 15px; background-color: #e8f5e9">Tak for din besked! Jeg henvender mig tilbage så snart jeg kan og tak for din tålmodighed!</p>
-        </div>
+        <form id="form" class="topBefore">
+          <input id="name" type="text" placeholder="NAVN" />
+          <input id="email" type="text" placeholder="E-MAIL" />
+          <input id="emne" type="text" placeholder="EMNE" />
+          <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+          <input id="submit" type="submit" value="Send!" />
+        </form>
+        <p id="succesBesked" style="display: none; text-align: center; padding: 15px; background-color: #e8f5e9">Tak for din besked! Vi henvender os tilbage så hurtigst som muligt! Tak for din tålmodighed.</p>
       </section>
     </main>
     <script src="js/kontaktformular.js"></script>
   </body>
-  <footer></footer>
+  <footer class="footer">
+    <div><img src="images/footerbillede.png" alt="Nørrebro Fighters Logo" /></div>
+    <div class="footer-tekstinfo">
+      <div class="sek1" style="margin-bottom: 5em">
+        <p>Nørrebro fighters</p>
+        <p>RessourceCenter Ydre Nørrebro</p>
+        <p>Tagensvej 85D • 2200 København N</p>
+      </div>
+      <div class="sek2" style="margin-bottom: 3em">
+        <p>REG NR: 2102</p>
+        <p>KONTO NR: 6888-476-332</p>
+      </div>
+      <div class="sek3" style="margin-bottom: 4em">
+        <a href="mailto:kontakt_noerrebrofighters@outlook.com"> Kontakt_noerrebrofighters@outlook.com </a>
+      </div>
+      <div class="sek4">
+        <p>CVR: 35199373</p>
+      </div>
+    </div>
+    <div>
+      <li><a href="index.html">Forside</a></li>
+      <li><a href="tilmelding.html">Holdtilmelding</a></li>
+      <li><a href="omos.html">Om os</a></li>
+      <li><a href="kontaktos.html">Kontakt os</a></li>
+    </div>
+  </footer>
 </html>
