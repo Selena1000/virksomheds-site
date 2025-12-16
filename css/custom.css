@@ -3,10 +3,25 @@
   --color-bg: #f4f2e9;
 
   /* margins */
-  --top-margin: 20px;
+  --top-margin: 100px;
 
   /* borders */
   --border-radius: 28px;
 
   --border-color: #9b0c0c;
+
+  --logo-width: 120px;
+  --info-border-color: #f4f2e9;
+
+  /* footer */
+  --footer-bg-color: #9b0c0c;
+  --footer-text-color: #f2f2f2;
+
+  /* text */
+  --h1-color: #9b0c0c;
+  --h1-font-size: 120px;
+
+  /* infocard section */
+  --infocard-bg-color: #9b0c0c;
+  --infocard-text-color: #f4f2e9;
 }
