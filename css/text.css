@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "mainard";
+  src: url(fonts/Mainard-Regular.ttf);
+}
+@font-face {
+  font-family: "inter";
+  src: url(fonts/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: "Archivo Black";
+  src: url(fonts/ArchivoBlack-Regular.ttf);
+}
+
+h1 {
+  font-family: "mainard";
+  font-size: var(--h1-font-size);
+  color: var(--h1-color);
+  src: url();
+}
+
+h2 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 48px;
+  color: var(--h1-color);
+}
+
+h3 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 24px;
+  color: var(--h1-color);
+}
+
+h4 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 20px;
+  color: var(--infocard-text-color);
+}
+
+p {
+  font-family: "inter", sans-serif;
+  font-size: 16px;
+  color: #161616;
+}
+
+button {
+  font-family: "inter", sans-serif;
+  color: var(--infocard-text-color);
+  font-weight: 800;
+}
+
+.norrebro {
+  font-family: "mainard";
+  font-size: 120px;
+  color: #0b3379;
+  grid-column: 1 / span 2;
+}

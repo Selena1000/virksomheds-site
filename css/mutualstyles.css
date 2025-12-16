@@ -1,0 +1,20 @@
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* target classes like .infocard1, .infocard2 etc. */
+[class^="infocard"] {
+  /* remove from layout by default so parent size follows only visible content */
+  display: none;
+  visibility: hidden;
+}
+
+/* add .visible to show an infocard when needed */
+[class^="infocard"].visible {
+  display: block;
+  visibility: visible;
+}

@@ -35,8 +35,6 @@ ul {
   padding: 20px;
   margin: 20px;
   border-radius: var(--border-radius);
-  padding-inline-start: 90px;
-  padding-inline-end: 90px;
 }
 
 ul li {
@@ -152,4 +150,27 @@ footer a {
 }
 footer a:hover {
   color: #0b3379;
+}
+
+.logo img {
+  width: var(--logo-width);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title-section {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.title-section img {
+  width: 150px;
+  margin-right: 20px;
 }
