@@ -3,204 +3,194 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Om os - Nørrebro Fighters</title>
+  <title>Om os – Nørrebro Fighters</title>
+
+  <!-- Favicon -->
   <link rel="icon" href="images/CROP_Red and Black Classic Kickboxing Club Sports Logo 6.svg">
+
+  <!-- FÆLLES NAV / LAYOUT (SAMME SOM KontaktOs) -->
+  <link rel="stylesheet" href="css/mutualstyles.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- OM OS SPECIFIK CSS -->
   <link rel="stylesheet" href="css/OmOs.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="header">
-  <div class="header__inner grid_3">
-    <div class="logo">🥊 Nørrebro Fighters</div>
+<!-- HEADER / NAVIGATION (IDENTISK MED KontaktOs) -->
+<header>
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Red and Black Classic Kickboxing Club Sports Logo 5.svg" alt="Nørrebro Fighters logo">
+      </a>
+    </div>
 
-    <nav>
-      <ul class="nav__list">
-        <li><a href="index.html">Forside</a></li>
-        <li><a href="OmOs.html">Om os</a></li>
-        <li><a href="tilmelding.html">Holdplan</a></li>
-      </ul>
-    </nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Forside</a></li>
+      <li><a href="tilmelding.html">Holdtilmelding</a></li>
+      <li><a href="OmOs.html" class="active">Om os</a></li>
+      <li><a href="KontaktOs.html">Kontakt os</a></li>
+    </ul>
 
-    <nav>
-      <ul class="nav__list">
-        <li><a href="KontaktOs.html">Kontakt</a></li>
-      </ul>
-    </nav>
-  </div>
+    <div class="login-button">
+      <button id="loginBtn">Login</button>
+    </div>
+  </nav>
 </header>
 
+<!-- MAIN -->
 <main>
 
-<!-- SECTION 1 – OM OS -->
-<section>
-  <div class="grid_2">
-    <img src="images/Mask group.webp" alt="Børn træner spark på sandsække">
+  <!-- SECTION 1 – OM OS -->
+  <section>
+    <div class="grid_2">
+      <img src="images/Mask group.webp" alt="Børn træner spark på sandsække">
 
+      <div>
+        <h3>Om os</h3>
+        <p>
+          Nørrebro Fighters er en sportsforening under Københavns Kommune.
+          Vi er drevet af frivillige og har en flad og uformel foreningsstruktur.
+          Hos os hjælper alle – til gengæld får du nye venskaber og bliver en del af fællesskabet.
+        </p>
+      </div>
+    </div>
+
+    <p>
+      Vores formål er at skabe fællesskaber og gode oplevelser for klubbens medlemmer
+      med kampsport som middel. Vi holder priserne lave, så alle kan være med,
+      uanset økonomi.
+    </p>
+
+    <p>
+      Særligt børn og unge fra lokalområdet er i fokus, og vi prioriterer,
+      at alle skal kunne føle sig trygge under deres træning.
+    </p>
+  </section>
+
+  <!-- SECTION 2 – BESTYRELSEN -->
+  <section>
+    <div class="banner">
+      <h2 class="section-title--board">Bestyrelsen</h2>
+    </div>
+
+    <div class="grid_2">
+      <img src="images/frivillige_med_numre.webp" alt="Bestyrelsesmedlemmer">
+
+      <div>
+        <h3>Bestyrelsen består af</h3>
+        <p>
+          Forperson: Christina<br>
+          Næstforperson: Marie<br>
+          Kasserer: Sofie<br>
+          Medlem: Amanda<br>
+          Medlem: Signe<br>
+          Medlem: Stina-Marie<br>
+          Suppleant: Maria
+        </p>
+      </div>
+    </div>
+
+    <p>
+      Nørrebro Fighters er drevet af en bestyrelse, som vælges af medlemmerne
+      på den årlige generalforsamling. Alle medlemmer kan stille op –
+      også uden tidligere bestyrelseserfaring.
+    </p>
+  </section>
+
+  <!-- SECTION 3 – BLIV FRIVILLIG -->
+  <section class="grid_4">
     <div>
-      <h3>Om os</h3>
+      <h3>Bliv frivillig</h3>
       <p>
-        Nørrebro Fighters er en sportsforening under Københavns Kommune.
-        Vi er drevet af frivillige og har en flad og uformel foreningsstruktur.
-        Hos os hjælper alle – til gengæld får du nye venskaber og bliver en del af fællesskabet.
+        Nørrebro Fighters blev stiftet i 2013 af engagerede frivillige
+        med mange års erfaring inden for kampsport og foreningsarbejde.
       </p>
     </div>
-  </div>
-
-  <p>
-    Vores formål er at skabe fællesskaber og gode oplevelser for klubbens medlemmer
-    med kampsport som middel. Vi holder priserne lave, så alle kan være med,
-    uanset om du har en stor eller lille økonomi.
-  </p>
-
-  <p>
-    Særligt børn og unge fra lokalområdet er i fokus,
-    og vi prioriterer, at alle skal kunne føle sig trygge under deres træning.
-    Det er også derfor, at vores pige- og kvindehold har mulighed for
-    at træne for lukkede døre med kvindelige trænere.
-  </p>
-</section>
-
-<!-- SECTION 2 – BESTYRELSEN -->
-<section>
-
-  <div class="banner">
-   <h2 class="section-title section-title--board">Bestyrelsen</h2>
-
-  </div>
-
-  <div class="grid_2">
-    <img src="images/frivillige_med_numre.webp" alt="Bestyrelsesmedlemmer">
 
     <div>
-      <h3>Bestyrelsen består af</h3>
+      <img src="images/Bliv_frivillig_indenfor.webp" alt="Frivillige i klubben">
       <p>
-        Forperson: Christina<br>
-        Næstforperson: Marie<br>
-        Kasserer: Sofie<br>
-        Medlem: Amanda<br>
-        Medlem: Signe<br>
-        Medlem: Stina-Marie<br>
-        Suppleant: Maria
+        Har du lyst til at være med som træner, hjælper eller praktisk frivillig,
+        hører vi meget gerne fra dig.
       </p>
     </div>
-  </div>
+  </section>
 
-  <p>
-    Nørrebro Fighters er drevet af en bestyrelse,
-    som vælges af medlemmerne på den årlige generalforsamling.
-    Alle medlemmer kan stille op – også selvom du ikke har siddet i en bestyrelse før.
-  </p>
+  <!-- SECTION 4 – LOKATION -->
+  <section class="grid_3">
+    <div class="location-media">
+      <img src="images/norrebrofighters.webp" alt="Nørrebro Fighters lokation">
 
-</section>
+      <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.412836397767!2d12.545!3d55.699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQxJzU2LjQiTiAxMsKwMzInNDIuMCJF!5e0!3m2!1sda!2sdk!4v1700000000000"
+  width="100%"
+  height="280"
+  style="border:0;"
+  allowfullscreen
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
 
-<!-- SECTION 3 – BLIV FRIVILLIG -->
-<section class="grid_4">
+    </div>
 
-  <div>
-    <h3>Bliv frivillig</h3>
-    <p>
-      Nørrebro Fighters startede som forening den 1. september 2013
-      af folk med mange års erfaring og kompetencer både inden for
-      kampsport og foreningsarbejde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus totam laudantium suscipit labore eos nam sit quas sunt consequatur! Quae, praesentium aliquid laboriosam sapiente ab commodi perspiciatis amet dolor?
-    </p>
-  </div>
-
-  <div>
-    <img src="images/Bliv_frivillig_indenfor.webp" alt="Frivillige i klubben">
-    <p>
-      Vi brød ud fra en anden Nørrebro-forening for at skabe en forening
-      med bedre styr på sin administration og med større fokus på medlemmerne.
-    </p>
-  </div>
-
-</section>
-
-<!-- SECTION 4 – LOKATION -->
-<section class="grid_3">
-
- <div class="location-media">
-  <img src="images/norrebrofighters.webp" alt="Nørrebro Fighters lokation">
-
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.412836397767!2d12.545!3d55.699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQxJzU2LjQiTiAxMsKwMzInNDIuMCJF!5e0!3m2!1sda!2sdk!4v1700000000000"
-    loading="lazy"
-    allowfullscreen
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
-
-
-  </div>
-
-  <div>
-    <h3>Vores lokation</h3>
-    <p>
-      Nørrebro Fighters samarbejder med Ressourcecenter Ydre Nørrebro,
-      som vi er så heldige at låne lokaler hos.
-    </p>
-    <p>
-      Derudover samarbejder vi med Københavns Kommune,
-      Nørrebro Idrætsråd, Idrætsprojektet,
-      lokale boligforeninger og andre organisationer på Nørrebro.
-    </p>
-  </div>
-
-</section>
+    <div>
+      <h3>Vores lokation</h3>
+      <p>
+        Nørrebro Fighters samarbejder med Ressourcecenter Ydre Nørrebro,
+        som vi er så heldige at låne lokaler hos.
+      </p>
+      <p>
+        Derudover samarbejder vi med Københavns Kommune,
+        Nørrebro Idrætsråd, Idrætsprojektet,
+        lokale boligforeninger og andre organisationer i bydelen.
+      </p>
+    </div>
+  </section>
 
 </main>
 
+<!-- FOOTER (UÆNDRET / FÆLLES) -->
 <footer class="footer">
   <div class="footer__inner">
 
-    <!-- VENSTRE: LOGO -->
     <div class="footer__logo">
       <img src="images/Red and Black Classic Kickboxing Club Sports Logo 5.svg"
            alt="Nørrebro Fighters logo">
     </div>
 
-    <!-- MIDTE: KONTAKTINFO -->
     <div class="footer__info">
       <p><strong>NØRREBRO FIGHTERS</strong></p>
       <p>Ressourcecenter Ydre Nørrebro</p>
       <p>Tagensvej 85D · 2200 København N</p>
 
-      <p class="spacer"></p>
-
       <p>Reg. nr.: 2102</p>
       <p>Konto nr.: 6888-476-332</p>
 
-      <p class="spacer"></p>
-
       <p>
-  Mail:
-  <a href="mailto:kontakt_noerrebrofighters@outlook.com">
-    kontakt_noerrebrofighters@outlook.com
-  </a>
-</p>
-
-
-      <p class="spacer"></p>
+        Mail:
+        <a href="mailto:kontakt_noerrebrofighters@outlook.com">
+          kontakt_noerrebrofighters@outlook.com
+        </a>
+      </p>
 
       <p>CVR: 35199373</p>
     </div>
 
-    <!-- HØJRE: NAVIGATION -->
-    <nav class="footer__nav" aria-label="Footer navigation">
+    <nav class="footer__nav">
       <ul>
-        <li><a href="OmOs.html">Om os</a></li>
+        <li><a href="index.html">Forside</a></li>
         <li><a href="tilmelding.html">Tilmelding</a></li>
-        <li><a href="holdplan.html">Holdoversigt</a></li>
+        <li><a href="OmOs.html">Om os</a></li>
         <li><a href="KontaktOs.html">Kontakt os</a></li>
       </ul>
     </nav>
 
   </div>
 </footer>
-
-
-
 
 </body>
 </html>
