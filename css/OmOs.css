@@ -1,0 +1,183 @@
+/* ==== Fonts ==== */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap');
+
+/* ==== Design tokens ==== */
+:root{
+  --red:#951616;
+  --red-700:#7b1212;
+  --cream:#f5f1e8;
+  --ink:#111;
+  --muted:#555;
+}
+
+/* ==== Base ==== */
+*{ box-sizing:border-box; }
+
+html, body{
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Inter, system-ui, sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.6;
+}
+
+img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+iframe{
+  width:100%;
+  height:280px;
+  border:0;
+}
+
+p{ margin:0 0 16px; }
+
+/* ==== Header ==== */
+.header{
+  background:linear-gradient(0deg, var(--red-700), var(--red));
+  color:#fff;
+}
+
+.header__inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:16px 20px;
+}
+
+.logo{
+  font-family:Archivo, sans-serif;
+  font-weight:900;
+}
+
+/* ==== Navigation ==== */
+.nav__list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:20px;
+}
+
+.nav__list a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  text-transform:uppercase;
+  font-size:14px;
+}
+
+.nav__list a:hover{
+  text-decoration:underline;
+}
+
+/* ==== Layout ==== */
+main{
+  max-width:1200px;
+  margin:0 auto;
+  padding:60px 20px;
+  display:grid;
+  gap:90px;
+}
+
+section{
+  display:grid;
+  gap:32px;
+}
+
+/* ==== Grids (diagram) ==== */
+.grid_2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:32px;
+  align-items:center;
+}
+
+.grid_3{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:32px;
+  align-items:start;
+}
+
+.grid_4{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:32px;
+  align-items:start;
+}
+
+/* ==== Typografi ==== */
+h2{
+  font-family:Archivo, sans-serif;
+  font-size:42px;
+  margin:0;
+}
+
+h3{
+  font-family:Archivo, sans-serif;
+  font-size:24px;
+  margin:0 0 12px;
+}
+
+/* ==== Banner ==== */
+.banner{
+  background:linear-gradient(90deg, var(--red), var(--red-700));
+  padding:40px 20px;
+}
+
+.banner h2{
+  color:#fff;
+  text-align:center;
+}
+
+/* ==== Footer ==== */
+footer{
+  background:var(--red-700);
+  color:#fff;
+  margin-top:80px;
+}
+
+.footer__inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:40px 20px;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:24px;
+}
+
+footer p{
+  margin:0;
+  font-size:14px;
+}
+
+/* ==== Responsiv ==== */
+@media (max-width:900px){
+  .grid_2,
+  .grid_3,
+  .grid_4,
+  .footer__inner{
+    grid-template-columns:1fr;
+  }
+
+  h2{
+    font-size:34px;
+  }
+}
+.location-media img{
+  margin-bottom: 82px; /* ← mellemrum */
+}
+
+main{
+  background-image: url("../images/kickbox-figure-13.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
