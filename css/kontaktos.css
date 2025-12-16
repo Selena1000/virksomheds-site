@@ -1,6 +1,6 @@
-nav ul {
+/* nav ul {
   border: 4px solid var(--border-color);
-}
+} */
 body {
   background: #f4f2e9;
 }
@@ -147,9 +147,6 @@ input {
   border-bottom: none;
 
   transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 input:hover {
@@ -204,4 +201,14 @@ textarea:hover {
 
 #submit:hover {
   color: #000000;
+}
+
+@media (width < 768px) {
+  .footer {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
