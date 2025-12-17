@@ -168,6 +168,10 @@ footer a:hover {
   width: var(--logo-width);
 }
 
+.hero {
+  max-width: 1400px;
+}
+
 main {
   max-width: 1200px;
   margin: 0 auto;
