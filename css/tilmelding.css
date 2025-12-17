@@ -1,10 +1,12 @@
 /* tilmeldings formular */
 input {
   border: 1px solid #ccc;
-  padding: .25rlh;
+  padding: 0.25rlh;
   border-radius: 6px;
   box-shadow: 0px 1px 2px #0001;
- 
+}
+body {
+  background: #f4f2e9;
 }
 
 button {
@@ -12,25 +14,40 @@ button {
   background-color: #000;
   color: #fff;
   border-radius: 6px;
-  padding: .25rlh .5rlh;
+  padding: 0.25rlh 0.5rlh;
   cursor: pointer;
 }
 
 .error-message {
   color: darkred;
 }
-
+.section1 {
+  border-bottom: 1.5px solid #7b1212;
+}
+.section2 {
+  margin-top: 3em;
+  border-bottom: 1.5px solid #7b1212;
+}
+h3 {
+  text-align: start;
+  font-size: x-large;
+  color: #2b4e8a;
+}
+.voreshold {
+  margin-right: 10em;
+  margin-top: 3em;
+}
 /* Form layout */
 form {
   display: grid;
   gap: 1rlh;
   padding: 1rlh;
-  
+
   .form-group {
     display: grid;
     gap: 0.1rlh;
   }
-  
+
   label:has(input) {
     display: flex;
     align-items: center;
@@ -40,7 +57,8 @@ form {
 }
 
 /* Pseudo-classes */
-:focus-visible { /* virker til både knapper og input-felter, select, textarea, links mm. */
+:focus-visible {
+  /* virker til både knapper og input-felter, select, textarea, links mm. */
   outline: 2px solid slateblue;
   outline-offset: 1px;
 }
@@ -50,11 +68,11 @@ button:hover {
 }
 /* Active-styles (imens man klikker) */
 button:active {
-  scale: .98;
+  scale: 0.98;
 }
 
 /* Valideringsregler */
-.error-message{
+.error-message {
   display: none;
 }
 
@@ -65,172 +83,157 @@ button:active {
   }
 }
 
-.form-group:has(:user-invalid){
-  .error-message{
+.form-group:has(:user-invalid) {
+  .error-message {
     display: block;
-    
   }
 }
 
-
 /* Sentrer innholdet i main og begrens bredden */
 main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
-
 
 /* Første seksjon: Hvem er vi? / Hvorfor oss? */
 .grid_2 {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-    align-items: center;
-    margin-bottom: 40px;
-    padding: 40px 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 40px 0;
 }
 
 .grid_2 img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
-
-
 
 /* Horisontal linje i bildet */
 .grid_2 + h3 + p + hr {
-    margin: 40px auto;
-    border: none;
-    border-top: 1px solid var(--border-light);
-    width: 80%;
+  margin: 40px auto;
+  border: none;
+  border-top: 1px solid var(--border-light);
+  width: 80%;
 }
 
 /* Midt-seksjon med trænere */
 .grid_3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    text-align: center;
-    padding: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: center;
+  padding: 40px 0;
+}
+.grid_3 h3 {
+  text-align: center;
 }
 
 .grid_3 img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px; /* Litt avrundede hjørner på bilder */
+  width: 100%;
+  height: auto;
+  border-radius: 5px; /* Litt avrundede hjørner på bilder */
 }
 
-/* Stiler for holdseksjonen */
-section h2, section h3 {
-    text-align: center;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-section h2 {
-    font-size: 2em;
-    color: var(--primary-red);
-    border-bottom: 2px solid var(--primary-red);
-    display: inline-block;
-    padding-bottom: 5px;
-    margin: 40px auto;
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: var(--h1-color);
+  font-size: 2em;
 }
 
 /* Oppsett for holdbeskrivelsene */
 section .grid_2 {
-    padding: 20px 0;
-    margin-bottom: 20px;
-    /* Sikrer at bildet er til venstre og tekst til høyre, som i bildet */
+  padding: 20px 0;
+  margin-bottom: 20px;
+  /* Sikrer at bildet er til venstre og tekst til høyre, som i bildet */
 }
 
 section .grid_2 img {
-    /* Juster høyden for å unngå for store bilder i beskrivelsen */
-    height: 200px; 
-    object-fit: cover;
+  /* Juster høyden for å unngå for store bilder i beskrivelsen */
+  height: 200px;
+  object-fit: cover;
 }
 
 /* --- TILMELDINGSFORMULAR STYLING --- */
 
 form {
-    background-color: var(--form-blue); /* Den mørke blå fargen */
-    color: rgb(255, 255, 255);
-    padding: 40px;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: 60px auto;
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 5px;
-    align-items: center;
-   
+  background-color: var(--form-blue); /* Den mørke blå fargen */
+  color: rgb(255, 255, 255);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5px;
+  align-items: center;
 }
 
-.tilmelding-blå{
-    background-color: #2b4e8a;
-    border-radius: 50px;
+.tilmelding-blå {
+  background-color: #2b4e8a;
+  border-radius: 50px;
 }
 
 /* 1. Venstre Kolonne: Tekst og Info */
 .form-info {
-    grid-column: 1 / 2;
-    /* Sikrer at denne strekker seg nedover hele høyden av skjemaet */
-    grid-row: 1 / -1; 
-    padding-right: 20px;
+  grid-column: 1 / 2;
+  /* Sikrer at denne strekker seg nedover hele høyden av skjemaet */
+  grid-row: 1 / -1;
+  padding-right: 20px;
 }
 
 .form-info h3 {
-    font-size: 2em;
-    margin-bottom: 10px;
-    /* Juster til skriften i bildet */
-    text-transform: uppercase;
-    font-weight: 800;
+  font-size: 2em;
+  margin-bottom: 10px;
+  /* Juster til skriften i bildet */
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 /* 2. Høyre Kolonne: Alle Input-felter */
 
-.form-group, .email {
-    grid-column: 2 / 3;
-    display: flex;
-    flex-direction: column;
-    margin-bottom:5px;
+.form-group,
+.email {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
 }
 
-
 .form-group.inline-fields {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
 
 .form-group.inline-fields label {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
-
 
 form button {
-    /* TIMELD DIG HER knappen */
-    background-color: transparent;
-    color: rgb(255, 255, 255);
-    border: 2px solid white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
-    
-    /* Viktig: Plasser knappen i høyre kolonne, justert til høyre */
-    grid-column: 2 / 3;
-    width: fit-content;
-    justify-self: end; 
-    margin-top: 20px;
+  /* TIMELD DIG HER knappen */
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  /* Viktig: Plasser knappen i høyre kolonne, justert til høyre */
+  grid-column: 2 / 3;
+  width: fit-content;
+  justify-self: end;
+  margin-top: 20px;
 }
-
-
