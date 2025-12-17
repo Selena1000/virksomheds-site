@@ -11,6 +11,18 @@ header {
   border-bottom: 2px solid #9b0c0c;
 }
 
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+  align-items: center;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
 nav {
   display: flex;
   flex-direction: row;
@@ -92,7 +104,7 @@ button#loginBtn:hover::after {
 button#loginBtn:hover {
   color: #0b3379;
 }
-/* header i boksen, same shiii yayyyy */
+
 nav ul li a {
   text-decoration: none;
   position: relative;
