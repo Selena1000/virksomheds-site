@@ -1,176 +1,159 @@
 <!DOCTYPE html>
 <html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/mutualstyles.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <title>Tilmelding</title>
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/tilmelding.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/mutualstyles.css" />
-  <link rel="stylesheet" href="css/custom.css" />
-  <title>Tilmelding</title>
-  <link rel="stylesheet" href="css/custom.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/tilmelding.css">
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html"> <img src="images/nytlogo.png" /></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Forside</a></li>
+          <li><a href="tilmelding.html">Holdtilmelding</a></li>
+          <li><a href="omos.html">Om os</a></li>
+          <li><a href="kontaktos.html">Kontakt os</a></li>
+        </ul>
+        <div class="login-button">
+          <button id="loginBtn">Login</button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1>Vores trenere:</h1>
+      <div class="grid_3">
+        <div>
+          <img src="images/carousel-1.webp" />
+          <h3>Navn</h3>
+          <p>Dette er Tor, han er trener og veldig snill</p>
+        </div>
 
+        <div>
+          <img src="images/carousel-1.webp" />
+          <h3>Navn</h3>
+          <p>Dette er Tor, han er trener og veldig snill</p>
+        </div>
 
-
-</head>
-
-<body>
-  <header>
-    <nav>
-      <div class="logo">
-        <a href="index.html"> <img src="images/nytlogo.png" /></a>
+        <div>
+          <img src="images/carousel-1.webp" />
+          <h3>Navn</h3>
+          <p>Dette er Tor, han er trener og veldig snill</p>
+        </div>
       </div>
-      <ul class="nav-links">
+
+      <section>
+        <h2>Vores hold:</h2>
+        <h3>Thai Kick Boxsing</h3>
+        <div class="grid_2">
+          <img src="images/carousel-2.webp" />
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, eaque ut totam laboriosam doloremque, laudantium culpa architecto dicta esse quaerat quia veritatis at praesentium, sequi officiis nobis nihil officia magnam.</p>
+        </div>
+
+        <h3>Kick Boxsing</h3>
+        <div class="grid_2">
+          <img src="images/carousel-7.webp" />
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, eaque ut totam laboriosam doloremque, laudantium culpa architecto dicta esse quaerat quia veritatis at praesentium, sequi officiis nobis nihil officia magnam.</p>
+        </div>
+
+        <h3>Selvforsvar</h3>
+        <div class="grid_2">
+          <img src="images/carousel-9.webp" />
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, eaque ut totam laboriosam doloremque, laudantium culpa architecto dicta esse quaerat quia veritatis at praesentium, sequi officiis nobis nihil officia magnam.</p>
+        </div>
+      </section>
+
+      <section>
+        <!-- Tilmld formular -->
+
+        <section class="tilmelding-blå">
+          <form>
+            <div class="form-info">
+              <h2>TILMELDINGSFORMULAR</h2>
+              <h3>HEJ! Er du vores nye FIGHTER?</h3>
+              <p class="price">PRIS: 275,00 kr</p>
+              <h3>Betaling af kontingent</h3>
+              <p>
+                Når du får tilbudt en plads på holdet, får du besked gennem Holdsport omkring betaling af kontingent. Man har 14 dage til at betale kontingentet, og hvis det ikke er betalt, gives pladsen til den næste på ventelisten. Det kan være en
+                god idé at tjekke dit spamfilter, da mails fra Holdsport nogle gange ender her, ellers så, skriv til os.
+              </p>
+            </div>
+
+            <div class="form-group">
+              <label for="navn">Navn</label>
+              <input type="text" id="navn" name="navn" required />
+              <p class="error-message">Please enter a value</p>
+            </div>
+
+            <div class="email">
+              <label for="email_1">Email</label>
+              <input type="email" id="email_1" name="email_1" required />
+              <p class="error-message">Please enter a value</p>
+            </div>
+
+            <div class="form-group inline-fields">
+              <label for="postnummer">Adresse (Postnummer og By)</label>
+              <input type="text" id="postnummer" name="postnummer" required placeholder="Postnummer" />
+              <input type="text" id="by" name="by" required placeholder="By" />
+            </div>
+
+            <div class="form-group">
+              <label for="fødselsdag">Fødselsdag</label>
+              <input type="date" id="fødselsdag" name="fødselsdag" required />
+              <p class="error-message">Please enter a value</p>
+            </div>
+
+            <div class="form-group">
+              <label for="kommentar">Kommentar</label>
+              <textarea id="kommentar" name="kommentar" required></textarea>
+              <p class="error-message">Please enter a value</p>
+            </div>
+
+            <div class="form-group">
+              <label for="terms">
+                <input type="checkbox" id="terms" name="accept_terms" value="yes" required />
+                Accept terms
+              </label>
+            </div>
+
+            <button type="submit">TILMELD DIG HER</button>
+          </form>
+        </section>
+      </section>
+    </main>
+    <footer class="footer">
+      <div><img src="images/footerbillede.png" alt="Nørrebro Fighters Logo" /></div>
+      <div class="footer-tekstinfo">
+        <div class="sek1" style="margin-bottom: 5em">
+          <p>Nørrebro fighters</p>
+          <p>RessourceCenter Ydre Nørrebro</p>
+          <p>Tagensvej 85D • 2200 København N</p>
+        </div>
+        <div class="sek2" style="margin-bottom: 3em">
+          <p>REG NR: 2102</p>
+          <p>KONTO NR: 6888-476-332</p>
+        </div>
+        <div class="sek3" style="margin-bottom: 4em">
+          <a href="mailto:kontakt_noerrebrofighters@outlook.com"> Kontakt_noerrebrofighters@outlook.com </a>
+        </div>
+        <div class="sek4">
+          <p>CVR: 35199373</p>
+        </div>
+      </div>
+      <div>
         <li><a href="index.html">Forside</a></li>
         <li><a href="tilmelding.html">Holdtilmelding</a></li>
         <li><a href="omos.html">Om os</a></li>
         <li><a href="kontaktos.html">Kontakt os</a></li>
-      </ul>
-      <div class="login-button">
-        <button id="loginBtn">Login</button>
       </div>
-    </nav>
-  </header>
-  <main>
-    <h1>Vores trenere:</h1>
-    <div class="grid_3">
-      <div>
-        <img src="images/carousel-1.webp" />
-        <h3>Navn</h3>
-        <p>Dette er Tor, han er trener og veldig snill</p>
-      </div>
-
-      <div>
-        <img src="images/carousel-1.webp" />
-        <h3>Navn</h3>
-        <p>Dette er Tor, han er trener og veldig snill</p>
-      </div>
-
-      <div>
-        <img src="images/carousel-1.webp" />
-        <h3>Navn</h3>
-        <p>Dette er Tor, han er trener og veldig snill</p>
-      </div>
-    </div>
-
-    <section>
-      <h2>Vores hold:</h2>
-      <h3>Thai Kick Boxsing</h3>
-      <div class="grid_2">
-        <img src="images/carousel-2.webp" />
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, eaque ut totam laboriosam doloremque,
-          laudantium culpa architecto dicta esse quaerat quia veritatis at praesentium, sequi officiis nobis nihil
-          officia magnam.</p>
-      </div>
-
-      <h3>Kick Boxsing</h3>
-      <div class="grid_2">
-        <img src="images/carousel-7.webp" />
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, eaque ut totam laboriosam doloremque,
-          laudantium culpa architecto dicta esse quaerat quia veritatis at praesentium, sequi officiis nobis nihil
-          officia magnam.</p>
-      </div>
-
-      <h3>Selvforsvar</h3>
-      <div class="grid_2">
-        <img src="images/carousel-9.webp" />
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, eaque ut totam laboriosam doloremque,
-          laudantium culpa architecto dicta esse quaerat quia veritatis at praesentium, sequi officiis nobis nihil
-          officia magnam.</p>
-      </div>
-    </section>
-
-    <section>
-      <!-- Tilmld formular -->
-
-      <section class="tilmelding-blå">
-        <form>
-          <div class="form-info">
-            <h2>TILMELDINGSFORMULAR</h2>
-            <h3>HEJ! Er du vores nye FIGHTER?</h3>
-            <p class="price">PRIS: 275,00 kr</p>
-            <h3>Betaling af kontingent</h3>
-            <p>Når du får tilbudt en plads på holdet, får du besked gennem Holdsport omkring betaling af kontingent. Man
-              har 14 dage til at betale kontingentet, og hvis det ikke er betalt, gives pladsen til den næste på
-              ventelisten.
-
-              Det kan være en god idé at tjekke dit spamfilter, da mails fra Holdsport nogle gange ender her, ellers
-              så, skriv til os.</p>
-          </div>
-
-          <div class="form-group">
-            <label for="navn">Navn</label>
-            <input type="text" id="navn" name="navn" required />
-            <p class="error-message">Please enter a value</p>
-          </div>
-
-          <div class="email">
-            <label for="email_1">Email</label>
-            <input type="email" id="email_1" name="email_1" required />
-            <p class="error-message">Please enter a value</p>
-          </div>
-
-          <div class="form-group inline-fields">
-            <label for="postnummer">Adresse (Postnummer og By)</label>
-            <input type="text" id="postnummer" name="postnummer" required placeholder="Postnummer" />
-            <input type="text" id="by" name="by" required placeholder="By" />
-          </div>
-
-          <div class="form-group">
-            <label for="fødselsdag">Fødselsdag</label>
-            <input type="date" id="fødselsdag" name="fødselsdag" required />
-            <p class="error-message">Please enter a value</p>
-          </div>
-
-          <div class="form-group">
-            <label for="kommentar">Kommentar</label>
-            <textarea id="kommentar" name="kommentar" required></textarea>
-            <p class="error-message">Please enter a value</p>
-          </div>
-
-          <div class="form-group">
-            <label for="terms">
-              <input type="checkbox" id="terms" name="accept_terms" value="yes" required />
-              Accept terms
-            </label>
-          </div>
-
-          <button type="submit">TILMELD DIG HER</button>
-
-        </form>
-      </section>
-
-
-    </section>
-
-  </main>
-  <footer class="footer">
-    <div><img src="images/footerbillede.png" alt="Nørrebro Fighters Logo" /></div>
-    <div class="footer-tekstinfo">
-      <div class="sek1" style="margin-bottom: 5em">
-        <p>Nørrebro fighters</p>
-        <p>RessourceCenter Ydre Nørrebro</p>
-        <p>Tagensvej 85D • 2200 København N</p>
-      </div>
-      <div class="sek2" style="margin-bottom: 3em">
-        <p>REG NR: 2102</p>
-        <p>KONTO NR: 6888-476-332</p>
-      </div>
-      <div class="sek3" style="margin-bottom: 4em">
-        <a href="mailto:kontakt_noerrebrofighters@outlook.com"> Kontakt_noerrebrofighters@outlook.com </a>
-      </div>
-      <div class="sek4">
-        <p>CVR: 35199373</p>
-      </div>
-    </div>
-    <div>
-      <li><a href="index.html">Forside</a></li>
-      <li><a href="tilmelding.html">Holdtilmelding</a></li>
-      <li><a href="omos.html">Om os</a></li>
-      <li><a href="kontaktos.html">Kontakt os</a></li>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
