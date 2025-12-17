@@ -26,10 +26,6 @@ button a {
   text-decoration: none;
 }
 
-nav ul {
-  border: 4px solid var(--border-color);
-}
-
 main {
   background-color: var(--color-bg);
   margin-top: var(--top-margin);
@@ -495,4 +491,8 @@ main {
 
 .holdinfo-overskrift {
   text-align: center;
+}
+.fightersforside {
+  margin-top: -0.8em;
+  margin-left: 1em;
 }

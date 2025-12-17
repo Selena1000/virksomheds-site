@@ -15,7 +15,6 @@ h1 {
   font-family: "mainard";
   font-size: var(--h1-font-size);
   color: var(--h1-color);
-  src: url();
 }
 
 h2 {
@@ -64,5 +63,5 @@ button {
   font-family: "mainard";
   font-size: 120px;
   color: #0b3379;
-  grid-column: 1 / span 2;
+  margin-right: 2em;
 }
