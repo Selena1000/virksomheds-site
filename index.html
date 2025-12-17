@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/text.css" />
     <link rel="stylesheet" href="css/karrusel.css" />
+    <link rel="stylesheet" href="" />
     <title>Forside</title>
   </head>
   <body>
@@ -31,12 +32,14 @@
     </header>
     <main>
       <section class="hero">
-        <img src="images/hero.svg" alt="heroimg" />
-        <h1></h1>
-        <p></p>
-        <div class="herobtns">
-          <button><a href="tilmelding.html">Tilmelding</a></button>
-          <button><a href="OmOs.html">Om os</a></button>
+        <img src="images/hero.webp" alt="heroimg" class="heroimg" />
+        <div class="hero-content">
+          <h1>Nørrebro Fighters</h1>
+          <p>Kampsport til alle</p>
+          <div class="herobtns">
+            <button><a href="tilmelding.html">Tilmelding</a></button>
+            <button><a href="OmOs.html">Om os</a></button>
+          </div>
         </div>
       </section>
       <article>
@@ -111,6 +114,9 @@
           <div class="card"><img src="images/carousel-7.webp" alt="people training" /></div>
           <div class="card"><img src="images/carousel-9.webp" alt="people training" /></div>
         </div>
+      </div>
+      <div class="holdinfo-overskrift">
+        <h2>Holdinformation</h2>
       </div>
       <section class="info-card" id="grid_2-1">
         <div class="info-card-text" id="rows_8-1">
@@ -288,25 +294,34 @@
         </div>
       </section>
     </main>
-    <footer>
-      <div class="logo_footer">
-        <img src="images/logo.svg" alt="logo" />
-      </div>
-      <div class="footer_text">
-        <p>Nørrebro fightersRessourceCenter Ydre NørrebroTagensvej 85D • 2200 København N</p>
-        <p>Reg nr:2102 Konto nr:6888-476-332</p>
-        <p>Mail:kontakt_noerrebrofighters@outlook.com CVR:35199373</p>
+    <footer class="footer">
+      <div><img src="images/footerbillede.png" alt="Nørrebro Fighters Logo" /></div>
+      <div class="footer-tekstinfo">
+        <div class="sek1" style="margin-bottom: 5em">
+          <p>Nørrebro fighters</p>
+          <p>RessourceCenter Ydre Nørrebro</p>
+          <p>Tagensvej 85D • 2200 København N</p>
+        </div>
+        <div class="sek2" style="margin-bottom: 3em">
+          <p>REG NR: 2102</p>
+          <p>KONTO NR: 6888-476-332</p>
+        </div>
+        <div class="sek3" style="margin-bottom: 4em">
+          <a href="mailto:kontakt_noerrebrofighters@outlook.com"> Kontakt_noerrebrofighters@outlook.com </a>
+        </div>
+        <div class="sek4">
+          <p>CVR: 35199373</p>
+        </div>
       </div>
       <div>
-        <ul class="footer_links">
-          <li><a href="#">Forside</a></li>
-          <li><a href="#">Holdtilmelding</a></li>
-          <li><a href="#">Om os</a></li>
-          <li><a href="#">Kontakt os</a></li>
-        </ul>
+        <li><a href="index.html">Forside</a></li>
+        <li><a href="tilmelding.html">Holdtilmelding</a></li>
+        <li><a href="omos.html">Om os</a></li>
+        <li><a href="kontaktos.html">Kontakt os</a></li>
       </div>
     </footer>
     <script src="js/login.js"></script>
     <script src="js/popover.js"></script>
+    <script src="js/kontaktformular.js"></script>
   </body>
 </html>
