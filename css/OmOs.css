@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@700;900&family=Inter:wght@400;500&display=swap');
+
+/* =====================
+   DESIGN TOKENS
+   ===================== */
+:root{
+  --red:#951616;
+  --red-700:#7b1212;
+  --cream:#f5f1e8;
+  --ink:#111;
+}
+
+/* =====================
+   BASE
+   ===================== */
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Inter, sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.6;
+}
+
+img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+iframe{
+  width:100%;
+  height:280px;
+  border:0;
+}
+
+/* =====================
+  /* =====================
+   HEADER / NAV
+   ===================== */
+.site-header{
+  background:
+    linear-gradient(to bottom,
+      #8d0f0f 0%,
+      #8d0f0f 18%,
+      var(--cream) 18%,
+      var(--cream) 82%,
+      #8d0f0f 82%,
+      #8d0f0f 100%
+    );
+}
+
+.nav-wrapper{
+  max-width:1400px;
+  margin:0 auto;
+  padding:18px 40px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+}
+
+/* Logo */
+.nav-logo img{
+  width:90px;
+  height:auto;
+}
+
+/* Midterboks */
+.nav-main{
+  justify-self:center;
+  background:var(--cream);
+  border:3px solid var(--red);
+  border-radius:40px;
+  padding:14px 40px;
+}
+
+.nav-main ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:48px;
+}
+
+.nav-main a{
+  font-family:Archivo, sans-serif;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  font-size:14px;
+  color:var(--red);
+  text-decoration:none;
+}
+
+.nav-main a:hover,
+.nav-main a.active{
+  text-decoration:underline;
+}
+
+/* Log ind */
+.nav-login a{
+  font-family:Archivo, sans-serif;
+  font-weight:900;
+  text-transform:uppercase;
+  color:var(--red);
+  text-decoration:none;
+  letter-spacing:.06em;
+  font-size:14px;
+}
+
+.nav-login a:hover{
+  text-decoration:underline;
+}
+
+/* =====================
+   LAYOUT
+   ===================== */
+main{
+  max-width:1200px;
+  margin:0 auto;
+  padding:60px 20px;
+  display:grid;
+  gap:90px;
+
+  background-image:url("../images/kickbox-figure-13.svg");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:60%;
+}
+
+section{
+  display:grid;
+  gap:32px;
+}
+
+/* =====================
+   GRIDS (MÅ IKKE FJERNES)
+   ===================== */
+.grid_2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:32px;
+  align-items:center;
+}
+
+.grid_3{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:32px;
+  align-items:start;
+}
+
+.grid_4{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:32px;
+  align-items:start;
+}
+
+/* =====================
+   TYPOGRAFI
+   ===================== */
+h2,
+h3{
+  font-family:Archivo, sans-serif;
+}
+
+h2{
+  font-size:42px;
+  margin:0;
+}
+
+h3{
+  font-size:24px;
+  margin:0 0 12px;
+}
+
+/* =====================
+   BESTYRELSEN TITEL
+   ===================== */
+.section-title--board{
+  font-family:Archivo, sans-serif;
+  font-weight:900;
+  font-size:42px;
+  color:#7b1212;
+  margin:0;
+}
+
+/* =====================
+   BANNER (FULDBREDDE)
+   ===================== */
+.banner{
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+
+  background-image:url("../images/Rectangle 221.svg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+
+  height:140px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* =====================
+   LOKATION
+   ===================== */
+.location-media{
+  display:grid;
+  gap:40px;
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+.footer{
+  background:#a10f0f;
+  padding:70px 0;
+  color:#fff;
+  font-family:"Mainard", Archivo, sans-serif;
+}
+
+.footer__inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 40px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:80px;
+  align-items:flex-start;
+}
+
+/* Logo */
+.footer__logo img{
+  width:180px;
+  height:auto;
+}
+
+/* Kontaktinfo */
+.footer__info{
+  font-size:15px;
+  line-height:1.9;
+}
+
+.footer__info p{
+  margin:0;
+}
+
+.footer__info strong{
+  letter-spacing:.08em;
+}
+
+.footer__info a{
+  color:#fff;
+  text-decoration:underline;
+}
+
+.footer__info .spacer{
+  margin:18px 0;
+}
+
+/* Footer navigation */
+.footer__nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:22px;
+}
+
+.footer__nav li{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+}
+
+.footer__nav li::before{
+  content:"";
+  width:14px;
+  height:14px;
+  background:#eee;
+  border-radius:50%;
+  margin-top:4px;
+}
+
+.footer__nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:14px;
+}
+
+.footer__nav a:hover{
+  text-decoration:underline;
+}
+
+/* =====================
+   RESPONSIV
+   ===================== */
+@media (max-width:900px){
+  .grid_2,
+  .grid_3,
+  .grid_4{
+    grid-template-columns:1fr;
+  }
+
+  h2{
+    font-size:34px;
+  }
+
+  .section-title--board{
+    font-size:34px;
+  }
+
+  .footer__inner{
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:40px;
+  }
+
+  .footer__logo img{
+    margin:0 auto;
+  }
+
+  .footer__nav ul{
+    justify-items:center;
+  }
+}
